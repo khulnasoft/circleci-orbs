@@ -1,0 +1,12 @@
+name: 'Add issue/PR to Triage Board'
+on:
+  issues:
+    types:
+      - opened
+  pull_request_target:
+    types:
+      - opened
+jobs:
+  add-to-triage-project-board:
+    uses: khulnasoft/actions/.github/workflows/triage_add_to_project.yml@main
+    secrets: inherit
